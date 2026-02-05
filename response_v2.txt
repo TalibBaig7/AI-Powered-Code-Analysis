@@ -1,0 +1,30 @@
+Note: Unnecessary use of -X or --request, POST is already inferred.
+* Host localhost:3000 was resolved.
+* IPv6: ::1
+* IPv4: 127.0.0.1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying [::1]:3000...
+* Connected to localhost (::1) port 3000
+> POST /ai/get-review HTTP/1.1
+> Host: localhost:3000
+> User-Agent: curl/8.7.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 48
+> 
+} [48 bytes data]
+* upload completely sent off: 48 bytes
+< HTTP/1.1 500 Internal Server Error
+< X-Powered-By: Express
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 388
+< ETag: W/"184-O1XyNuZKd8xzUd51+VvieGu8QZg"
+< Date: Sun, 01 Feb 2026 23:32:28 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+< 
+{ [388 bytes data]
+100   436  100   388  100    48   1161    143 --:--:-- --:--:-- --:--:--  1305100   436  100   388  100    48   1160    143 --:--:-- --:--:-- --:--:--  1301
+* Connection #0 to host localhost left intact
+{"error":"Failed to generate response","details":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."}
