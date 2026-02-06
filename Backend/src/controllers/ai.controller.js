@@ -19,8 +19,12 @@ const getReview = async (req, res) => {
     res.json({ response });
     console.log("✅ Response sent.");
   } catch (error) {
-    console.error("Error in getResponse:", error);
-    res.status(500).send({ error: "Failed to generate response", details: error.message });
+    console.error("Error in getReview:", error);
+    res.status(500).json({
+      error: "Failed to generate review",
+      message: error.message,
+      code: error.status || 500
+    });
   }
 };
 
