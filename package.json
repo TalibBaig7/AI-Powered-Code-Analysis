@@ -5,5 +5,11 @@
         "start": "cd Backend && npm start",
         "dev": "cd Backend && npm run dev",
         "install-all": "cd Backend && npm install"
+    },
+    "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "cors": "^2.8.6",
+        "dotenv": "^17.2.3",
+        "express": "^5.2.1"
     }
 }
