@@ -23,7 +23,8 @@ function App() {
     setIsLoading(true);
     setReview('');
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code });
+      // Use relative API path so it works both locally (via Vite proxy) and on Vercel (`/api` routes)
+      const response = await axios.post('/api/ai/get-review', { code });
       setReview(response.data.response);
     } catch (error) {
       setReview('**Error:** Unable to get review. Please check if the backend is running.');
