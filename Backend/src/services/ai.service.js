@@ -4,7 +4,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
 
 async function generateContent(prompt) {
-  const modelName = "gemini-1.5-flash";
+  const modelName = "gemini-2.5-flash-lite";
   console.log("------------------------------------------------");
   console.log("🔑 ACTIVE API KEY:", process.env.GOOGLE_GEMINI_KEY ? process.env.GOOGLE_GEMINI_KEY.slice(0, 10) + "..." : "UNDEFINED");
   console.log("🤖 MODEL:", modelName);
